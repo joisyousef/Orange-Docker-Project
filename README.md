@@ -10,10 +10,6 @@ We need to build an three tier application (backend,Database,proxy) with docker 
 
 Note:You will find backend files in the same path of the project.
 
-
-
-Done 
-
-![[Screenshot_20240912_190556.png]]
-
-![[Screenshot_20240912_190954.png]]
+Done
+![alt text](Screenshot_20240912_190556.png)
+![alt text](Screenshot_20240912_190954.png)
