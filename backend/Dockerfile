@@ -1,29 +1,35 @@
-# Stage 1: Build the Go application
-FROM golang:1.19 AS builder
+# Stage 1: Build the Go binary
+FROM golang:1.18 AS builder
 
-# Set the working directory inside the container
+# Set the Current Working Directory inside the container
 WORKDIR /app
 
-# Copy the backend source code to the container
+# Copy go mod and sum files
+COPY go.mod go.sum ./
+
+# Download dependencies
+RUN go mod download
+
+# Copy the source code into the container
 COPY . .
 
-# Build the Go application
-RUN go mod tidy && go build -o backend-app .
+# Build the Go binary with CGO_ENABLED=0 for static linking
+RUN CGO_ENABLED=0 go build -o backend .
 
-# Stage 2: Create a minimal image for running the application
-FROM alpine:latest
+# Stage 2: Create a small image
+FROM alpine:latest  
 
-# Install certificates for HTTPS support
+# Install required packages
 RUN apk --no-cache add ca-certificates
 
-# Set the working directory inside the container
-WORKDIR /app
+# Copy the binary from the builder stage
+COPY --from=builder /app/backend /backend
 
-# Copy the built backend binary from the builder stage
-COPY --from=builder /app/backend-app /app/backend-app
+# Make sure the binary is executable
+RUN chmod +x /backend
 
-# Expose port 8000 (the backend service port)
-EXPOSE 8000
+# Set the working directory
+WORKDIR /
 
-# Run the backend application
-CMD ["./backend-app"]
+# Command to run the binary
+CMD ["./backend"]
