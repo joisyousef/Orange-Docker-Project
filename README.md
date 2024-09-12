@@ -14,4 +14,6 @@ Note:You will find backend files in the same path of the project.
 
 Done 
 
-![image](https://github.com/user-attachments/assets/969300f3-755b-498b-a8eb-bb0a74bd1740)
+![[Screenshot_20240912_190556.png]]
+
+![[Screenshot_20240912_190954.png]]
