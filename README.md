@@ -1,15 +1,17 @@
-Hi XD
-
 We need to build an three tier application (backend,Database,proxy) with docker principles.
 
-- The backend docker file write in multi-stage approach.
-- The database creadential is in your host machine.
-- Make sure that proxy is up and running in https protocol and the configuration files is in your host machine.
-- Kindly make sure that each container is in seperate network.
-- Make sure that all project is up and down with one command.
+    - The backend docker file write in multi-stage approach.
+    - The database creadential is in your host machine.
+    - Make sure that proxy is up and running in https protocol and the configuration files is in your host machine.
+    - Kindly make sure that each container is in seperate network.
+    - Make sure that all project is up and down with one command.
 
 Note:You will find backend files in the same path of the project.
 
-Done
-![alt text](Screenshot_20240912_190556.png)
-![alt text](Screenshot_20240912_190954.png)
+Done!
+
+![alt text](attachments/Screenshot_20240913_113001.png)
+
+blog posts
+
+![alt text](/attachments/Screenshot_20240913_112802.png)
