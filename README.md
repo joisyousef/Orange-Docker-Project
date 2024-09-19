@@ -10,12 +10,6 @@ Note:You will find backend files in the same path of the project.
 
 Done!
 
-![alt text](attachments/Screenshot_20240913_113001.png)
-
-blog posts
-
-![alt text](/attachments/Screenshot_20240913_112802.png)
-
 ## Compose sample application
 
 ### Go server with a Nginx proxy and a MariaDB/MySQL database
@@ -122,4 +116,4 @@ Done!
 
 blog posts
 
-![alt text](/attachments/image2)
+![alt text](/attachments/image2.png)
