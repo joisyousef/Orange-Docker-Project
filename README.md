@@ -34,7 +34,7 @@ Project structure:
 [_compose.yaml_](compose.yaml)
 
 ```yaml
-	services:
+services:
   backend:
     build:
       context: backend
