@@ -17,24 +17,24 @@ Done!
 Project structure:
 
 ```
-.
 ├── backend
 │   ├── Dockerfile
 │   ├── go.mod
 │   ├── go.sum
 │   └── main.go
+├── compose.yaml
 ├── db
 │   └── password.txt
 ├── proxy
+│   ├── Dockerfile
 │   └── nginx.conf
-├── compose.yaml
 └── README.md
 ```
 
 [_compose.yaml_](compose.yaml)
 
 ```yaml
-services:
+	services:
   backend:
     build:
       context: backend
@@ -43,7 +43,7 @@ services:
   db:
     # We use a mariadb image which supports both amd64 & arm64 architecture
     image: mariadb:10-focal
-    # If you really want to use MySQL, uncomment the following line
+	    # If you really want to use MySQL, uncomment the following line
     #image: mysql:8
     ...
   proxy:
