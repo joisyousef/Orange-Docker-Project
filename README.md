@@ -33,7 +33,7 @@ Project structure:
 
 [_compose.yaml_](compose.yaml)
 
-```yaml
+```yml
 services:
   backend:
     build:
